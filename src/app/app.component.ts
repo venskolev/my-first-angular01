@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { CardComponent } from './card/card.component';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,9 @@ import { CardComponent } from './card/card.component';
   styleUrls: ['./app.component.css'],
   template: `
   <h1>Hello World!</h1>
-  <p>My first Angular App</p>`
+  <span class="red">My first Angular App</span>`,
+  styles: ['h1, .none-message { color: red; margin-left: auto; margin-right: auto; width: 500px; }'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 
 export class AppComponent {
